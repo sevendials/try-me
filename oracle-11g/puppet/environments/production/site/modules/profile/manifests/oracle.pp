@@ -5,5 +5,6 @@ class profile::oracle {
   class { 'profile::oracle::listener': } ->
   class { 'profile::oracle::tnsnames': } ->
   class { 'profile::oracle::database': } ~>
-  class { 'profile::oracle::autostart': }
+  class { 'profile::oracle::autostart': } ->
+  class { 'profile::oracle::tryme': }
 }
