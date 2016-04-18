@@ -1,3 +1,2 @@
-.vagrant
-sources
-puppet/environments/production/modules/*
+sources/[^.]*
+puppet/environments/production/modules/[^.]*
