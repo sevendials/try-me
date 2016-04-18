@@ -1,6 +1,6 @@
 # runs dbinstall from oradb
 class profile::oracle::install {
-  oradb::installdb{ 'foo':
+  oradb::installdb{ 'test':
     version                   => '11.2.0.1',
     file                      => 'linux.x64_11gR2_database',
     database_type             => 'EE',
@@ -13,7 +13,7 @@ class profile::oracle::install {
     download_dir              => '/var/tmp',
     zip_extract               => true,
     remote_file               => false,
-    puppet_download_mnt_point => '/vagrant/zips',
+    puppet_download_mnt_point => '/vagrant/sources',
   }
 
 }
