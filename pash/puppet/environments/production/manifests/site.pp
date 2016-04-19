@@ -23,7 +23,7 @@ exec { 'xbuild':
 }
 ->
 file { '/bin/pash':
-  content => "#!/bin/bash\nif [[ \$TERM == dummy ]]; then\n  exec /bin/bash \"\$@\"\nfi\nexec /usr/bin/mono ${pash_bin}\n",
+  content => "#!/bin/bash\nif [[ \$TERM == dummy ]] || [[ \$TERM == dumb ]]; then\n  exec /bin/bash \"\$@\"\nfi\nexec /usr/bin/mono ${pash_bin}\n",
   mode    => '0755',
 }
 augeas { 'Pash shell':
