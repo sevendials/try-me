@@ -2,6 +2,6 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "puppetlabs-VAGRANTSLASH-centos-7.2-64-puppet"
+  config.vm.box = "puppetlabs/centos-7.2-64-puppet"
   config.vm.provision "puppet", :environment_path => 'puppet/environments'
 end
